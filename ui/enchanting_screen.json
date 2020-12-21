@@ -1,0 +1,5 @@
+{
+  "selectable_button@enchanting.base_button": {
+    "sound_name": "block.enchantment_table.use"
+  }
+}

@@ -1,0 +1,995 @@
+{
+  "item_icon_base": {
+    "type": "image",
+    "size": "$item_icon_size",
+    "$item_icon_size|default": [ 16, 16 ],
+    "layer": 1,
+    "variables": [
+      {
+        "requires": "($pocket_screen and (not $small_item_icons))",
+        "$item_icon_size": [ 26, 26 ]
+      }
+    ]
+  },
+  "item_icon_shading@common.item_icon_base": {
+    "texture": "$item_icon_shading",
+    "$item_icon_shading|default": "$item_icon_shading_small",
+    "$item_icon_shading_small|default": "textures/ui/icon_shading_block_small",
+    "$item_icon_shading_large|default": "textures/ui/icon_shading_block_large",
+    "layer": 1,
+    "ignored": "$no_block_shading",
+    "variables": [
+      {
+        "requires": "($pocket_screen and (not $small_item_icons))",
+        "$item_icon_shading": "$item_icon_shading_large",
+        "$item_icon_size": [ 26, 26 ]
+      }
+    ]
+  },
+  "beacon_icon@common.item_icon_shading": {
+    "$item_icon_shading_small": "textures/ui/icon_shading_beacon_small",
+    "$item_icon_shading_large": "textures/ui/icon_shading_beacon_large"
+  },
+  "chest_icon@common.item_icon_base": {
+    "texture": "textures/ui/icon_chest"
+  },
+  "trapped_chest_icon@common.item_icon_base": {
+    "texture": "textures/ui/icon_trapped_chest"
+  },
+  "ender_chest_icon@common.item_icon_base": {
+    "texture": "textures/ui/icon_ender_chest"
+  },
+  "compound_creator_icon@common.item_icon_shading": {
+    "$item_icon_shading_small": "textures/ui/icon_shading_compound_creator_small",
+    "$item_icon_shading_large": "textures/ui/icon_shading_compound_creator_large"
+  },
+  "enchanting_table_icon@common.item_icon_shading": {
+    "$item_icon_shading_small": "textures/ui/icon_shading_enchanting_table_small",
+    "$item_icon_shading_large": "textures/ui/icon_shading_enchanting_table_large"
+  },
+  "end_rod_icon@common.item_icon_shading": {
+    "$item_icon_shading_small": "textures/ui/icon_shading_end_rod_small",
+    "$item_icon_shading_large": "textures/ui/icon_shading_end_rod_large"
+  },
+  "spawner_icon@common.item_icon_shading": {
+    "$item_icon_shading_small": "textures/ui/icon_shading_spawner_small",
+    "$item_icon_shading_large": "textures/ui/icon_shading_spawner_large"
+  },
+  "container_slot_button_prototype": {
+    "focus_wrap_enabled": true
+  },
+  "flying_item_renderer": {
+    "modifications": [
+      {
+        "array_name": "property_bag",
+        "operation": "remove",
+        "where": {
+          "#flying_item_renderer": true
+        }
+      }
+    ]
+  },
+  "highlight_slot_panel/white_border": {
+    "ignored": true
+  },
+  "button": {
+    "sound_name": "ui.press"
+  },
+  "toggle": {
+    "sound_name": "ui.press"
+  },
+  "close_button": {
+    "sound_name": "ui.back"
+  },
+  "back_title_button/panel1/button": {
+    "sound_name": "ui.back"
+  },
+  "inventory_selected_stack_size_text": {
+    "color": "$item_stack_count_color",
+    "offset": [ 0, 2 ]
+  },
+  "inventory_selected_icon@common.item_renderer": {
+    "size": [ 16, 16 ],
+    "offset": [ 0, 0 ],
+    "$small_item_icons": true,
+    "controls": [
+      {
+        "beacon_icon@common.beacon_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 9043968)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "blue_ice_icon@common.item_icon_shading": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = -720896)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "chest_icon_1@common.chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 3538944)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "chest_icon_2@common.chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 3538945)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "chest_icon_3@common.chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 3538946)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "chest_icon_4@common.chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 3538947)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "chest_icon_5@common.chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 3538948)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "chest_icon_6@common.chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 3538949)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "trapped_chest_icon_1@common.trapped_chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 9568256)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "trapped_chest_icon_2@common.trapped_chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 9568257)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "trapped_chest_icon_3@common.trapped_chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 9568258)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "trapped_chest_icon_4@common.trapped_chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 9568259)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "trapped_chest_icon_5@common.trapped_chest_icon": {
+          "bindings": [{
+              "binding_name": "(#inventory_selected_item = 9568260)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }]
+        }
+      },
+      {
+        "trapped_chest_icon_6@common.trapped_chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 9568261)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "ender_chest_icon_1@common.ender_chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 8519680)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "ender_chest_icon_2@common.ender_chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 8519681)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "ender_chest_icon_3@common.ender_chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 8519682)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "ender_chest_icon_4@common.ender_chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 8519683)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "ender_chest_icon_5@common.ender_chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 8519684)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "ender_chest_icon_6@common.ender_chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 8519685)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "compound_creator_icon@common.compound_creator_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 15597568)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "crying_obsidian_icon@common.item_icon_shading": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = -18939904)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "glowing_obsidian_icon@common.item_icon_shading": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 16121856)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "enchanting_table_icon@common.enchanting_table_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 7602176)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "end_rod_icon_1@common.end_rod_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 13631488)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "end_rod_icon_2@common.end_rod_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 13631489)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "end_rod_icon_3@common.end_rod_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 13631490)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "end_rod_icon_4@common.end_rod_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 13631491)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "end_rod_icon_5@common.end_rod_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 13631492)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "end_rod_icon_6@common.end_rod_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 13631493)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "glowstone_icon@common.item_icon_shading": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 5832704)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "jack_o_lantern_icon@common.item_icon_shading": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 5963776)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "magma_block_icon@common.item_icon_shading": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 13959168)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "nether_portal_icon@common.item_icon_shading": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 5898240)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "sea_lantern_icon@common.item_icon_shading": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 11075584)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "shroomlight_icon@common.item_icon_shading": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = -15073280)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "spawner_icon@common.spawner_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#inventory_selected_item = 3407872)",
+              "binding_name_override": "#visible",
+              "binding_condition": "none",
+              "binding_type": "global"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "inventory_selected_icon_button": {
+    "sound_name": "ui.press"
+  },
+  "inventory_take_progress_icon_button": {
+    "sound_name": "ui.press"
+  },
+  "item_renderer": {
+    "$item_renderer_binding_condition|default": "none",
+    "controls": [
+      {
+        "beacon_icon@common.beacon_icon": {
+          "bindings": [
+              {
+              "binding_name": "(#item_id_aux = 9043968)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "blue_ice_icon@common.item_icon_shading": {
+          "bindings": [
+              {
+              "binding_name": "(#item_id_aux = -720896)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "chest_icon_1@common.chest_icon": {
+          "bindings": [
+              {
+              "binding_name": "(#item_id_aux = 3538944)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "chest_icon_2@common.chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 3538945)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "chest_icon_3@common.chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 3538946)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "chest_icon_4@common.chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 3538947)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "chest_icon_5@common.chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 3538948)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "chest_icon_6@common.chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 3538949)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "trapped_chest_icon_1@common.trapped_chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 9568256)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "trapped_chest_icon_2@common.trapped_chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 9568257)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "trapped_chest_icon_3@common.trapped_chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 9568258)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "trapped_chest_icon_4@common.trapped_chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 9568259)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "trapped_chest_icon_5@common.trapped_chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 9568260)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "trapped_chest_icon_6@common.trapped_chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 9568261)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "ender_chest_icon_1@common.ender_chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 8519680)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "ender_chest_icon_2@common.ender_chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 8519681)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "ender_chest_icon_3@common.ender_chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 8519682)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "ender_chest_icon_4@common.ender_chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 8519683)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "ender_chest_icon_5@common.ender_chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 8519684)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "ender_chest_icon_6@common.ender_chest_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 8519685)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "compound_creator_icon@common.compound_creator_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 15597568)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "crying_obsidian_icon@common.item_icon_shading": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = -18939904)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "glowing_obsidian_icon@common.item_icon_shading": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 16121856)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "enchanting_table_icon@common.enchanting_table_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 7602176)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "end_rod_icon_1@common.end_rod_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 13631488)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "end_rod_icon_2@common.end_rod_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 13631489)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "end_rod_icon_3@common.end_rod_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 13631490)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "end_rod_icon_4@common.end_rod_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 13631491)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "end_rod_icon_5@common.end_rod_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 13631492)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "end_rod_icon_6@common.end_rod_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 13631493)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "glowstone_icon@common.item_icon_shading": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 5832704)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "jack_o_lantern_icon@common.item_icon_shading": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 5963776)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "magma_block_icon@common.item_icon_shading": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 13959168)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "nether_portal_icon@common.item_icon_shading": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 5898240)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "sea_lantern_icon@common.item_icon_shading": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 11075584)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "shroomlight_icon@common.item_icon_shading": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = -15073280)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      },
+      {
+        "spawner_icon@common.spawner_icon": {
+          "bindings": [
+            {
+              "binding_name": "(#item_id_aux = 3407872)",
+              "binding_name_override": "#visible",
+              "binding_type": "collection",
+              "binding_collection_name": "$item_collection_name"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "crafting_icon": {
+    "texture": "textures/ui/icon_crafting_table"
+  },
+  "inventory_icon@crafting.icon_image": {
+    "size": [ 20, 20 ],
+    "texture": "textures/ui/icon_chest"
+  },
+  "inventory_tab": {
+    "$tab_icon": "crafting_pocket.inventory_icon"
+  }
+}

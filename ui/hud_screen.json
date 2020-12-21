@@ -1,0 +1,208 @@
+{
+  "empty_progress_bar": {
+    "texture": "textures/gui/icons",
+    "uv": [ 0, 64 ],
+    "uv_size": [ 182, 5 ]
+  },
+  "full_progress_bar": {
+    "texture": "textures/gui/icons",
+    "uv": [ 0, 69 ],
+    "uv_size": [ 182, 5 ]
+  },
+  "progress_text_label": {
+    "shadow": false
+  },
+  "progress_text_label_border@progress_text_label": {
+    "color": "$experience_text_border_color"
+  },
+  "exp_progress_bar_and_hotbar/hotbar": {
+    "offset": [ 4, 16 ]
+  },
+  "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar": {
+    "controls": [
+      {
+        "empty_progress_bar@empty_progress_bar": {
+          "size": [ "100%c", 5 ],
+          "layer": 1,
+          "controls": [
+            {
+              "full_progress_bar@full_progress_bar": {
+                "size": [ "100%c + 10px", 5 ],
+                "layer": 2,
+                "controls": [
+                  {
+                    "removed_nub": {
+                      "type": "panel",
+                      "size": [ "100%c - 10px", 5 ],
+                      "max_size": [ 172, 5 ],
+                      "layer": 3,
+                      "tiled": true,
+                      "controls": [
+                        {
+                          "hotbar@hotbar_chooser": {
+                            "offset": [ 4, 16 ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "progress_text_label@progress_text_label": {
+          "offset": [ 0, 0 ],
+          "layer": 7
+        }
+      },
+      {
+        "progress_text_label_left_border@progress_text_label_border": {
+          "offset": [ -0.5, 0 ],
+          "layer": 6
+        }
+      },
+      {
+        "progress_text_label_right_border@progress_text_label_border": {
+          "offset": [ 0.75, 0 ],
+          "layer": 6
+        }
+      },
+      {
+        "progress_text_label_top_border@progress_text_label_border": {
+          "offset": [ 0, -0.75 ],
+          "layer": 6
+        }
+      },
+      {
+        "progress_text_label_bottom_border@progress_text_label_border": {
+          "offset": [ 0, 0.5 ],
+          "layer": 6
+        }
+      },
+      {
+        "progress_text_label_top_left_border@progress_text_label_border": {
+          "offset": [ -0.5, -0.75 ],
+          "layer": 6
+        }
+      },
+      {
+        "progress_text_label_top_right_border@progress_text_label_border": {
+          "offset": [ 0.75, -0.75 ],
+          "layer": 6
+        }
+      },
+      {
+        "progress_text_label_bottom_left_border@progress_text_label_border": {
+          "offset": [ -0.5, 0.5 ],
+          "layer": 6
+        }
+      },
+      {
+        "progress_text_label_bottom_right_border@progress_text_label_border": {
+          "offset": [ 0.75, 0.5 ],
+          "layer": 6
+        }
+      }
+    ]
+  },
+  "gui_hotbar_grid_item/hotbar_parent/item_count": {
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "remove",
+        "where": {
+          "binding_name": "#stack_count_visible"
+        }
+      },
+      {
+        "array_name": "bindings",
+        "operation": "remove",
+        "where": {
+          "binding_name_override": "#visible"
+        }
+      },
+      {
+        "array_name": "bindings",
+        "operation": "remove",
+        "where": {
+          "binding_type": "collection"
+        }
+      },
+      {
+        "array_name": "bindings",
+        "operation": "remove",
+        "where": {
+          "binding_collection_name": "$stack_count_collection_name"
+        }
+      }
+    ]
+  },
+  "root_panel": {
+    "$small_item_icons": true,
+    "$no_block_shading": true
+  },
+  "root_panel/centered_gui_elements_at_bottom_middle": {
+    "offset": "$hotbar_offset",
+    "$hotbar_offset|default": [ 0, "-6.5%" ],
+    "variables": [
+      {
+        "requires": "$touch",
+        "$hotbar_offset": [ 0, 0 ]
+      }
+    ]
+  },
+  "root_panel/hud_actionbar_text_area": {
+    "offset": "$actionbar_offset",
+    "$actionbar_offset|default": [ 0, "-6.5%" ],
+    "variables": [
+      {
+        "requires": "$touch",
+        "$actionbar_offset": [ 0, 0 ]
+      }
+    ]
+  },
+  "hotbar_slot_image": {
+    "alpha": 1
+  },
+  "offhand_slot_image": {
+    "type": "image",
+    "texture": "textures/gui/widgets",
+    "size": [ 22, 22 ],
+    "uv": [ 24, 23 ],
+    "uv_size": [ 22, 22],
+    "layer": 1
+  },
+  "hud_title_text/title_frame/title": {
+    "shadow": true
+  },
+  "hud_title_text/subtitle_frame/subtitle": {
+    "shadow": true
+  },
+  "item_name_text/item_text_label": {
+    "shadow": true
+  },
+  "survival_item_name_text@hud.item_name_text": {
+    "$offset|default": [ 0, -28 ]
+  },
+  "survival_above_interact_button_item_text@hud.item_name_text": {
+    "offset": [ 0, -38 ]
+  },
+  "creative_jukebox_popup_text@hud.jukebox_text": {
+    "offset": [ 0, -53 ]
+  },
+  "survival_jukebox_popup_text@hud.jukebox_text": {
+    "offset": [ 0, -53 ]
+  },
+  "creative_jukebox_above_interact_button_popup_text@hud.jukebox_text": {
+    "offset": [ 0, -63 ]
+  },
+  "survival_jukebox_above_interact_button_popup_text@hud.jukebox_text": {
+    "offset": [ 0, -63 ]
+  },
+  "player_position": {
+    "texture": "textures/ui/empty"
+  }
+}

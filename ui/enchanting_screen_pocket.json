@@ -1,0 +1,8 @@
+{
+  "selectable_button@enchanting.selectable_button": {
+    "sound_name": "ui.press"
+  },
+  "enchanting_confirm_button@common.button": {
+    "sound_name": "block.enchantment_table.use"
+  }
+}

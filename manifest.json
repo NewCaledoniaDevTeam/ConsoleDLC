@@ -1,0 +1,43 @@
+{
+	"format_version": 2,
+	"header": {
+		"description": "Minecraft Bedrock Texture DLC for New Caledonia Shader Packs to design to old console verisons of Minecraft",
+		"name": "Console DLC",
+		"uuid": "e2f2829b-52ad-45e0-884b-62b5dee179bc",
+		"version": [0, 0, 1],
+		"min_engine_version": [1, 14, 0]
+	},
+	"modules": [{
+		"description": "Minecraft Bedrock Texture DLC for New Caledonia Shader Packs to design to old console verisons of Minecraft",
+		"type": "resources",
+		"uuid": "baf1a2f2-6ce6-499b-8006-5eab44575ca6",
+		"version": [0, 0, 1]
+	}],
+	"subpacks": [
+		{
+			"folder_name": "wiiu",
+			"name": "Wii U",
+			"memory_tier": 1
+		},
+		{
+			"folder_name": "playstation3",
+			"name": "Playstation 3",
+			"memory_tier": 2
+		},
+		{
+			"folder_name": "playstation4",
+			"name": "Playstation 4",
+			"memory_tier": 2
+		},
+		{
+			"folder_name": "xbox360",
+			"name": "Xbox 360",
+			"memory_tier": 3
+		},
+		{
+			"folder_name": "xboxone",
+			"name": "Xbox One",
+			"memory_tier": 3
+		}
+	]
+}

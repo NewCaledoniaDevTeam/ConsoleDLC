@@ -1,0 +1,89 @@
+{
+  "arrow_right_image": {
+    "texture": "$trade_right_arrow_texture",
+	"size": "$trade_right_arrow_size",
+	"offset": "$trade_center_offset",
+	"$trade_center_offset|default": [ 0, 0 ],
+	"$trade_right_arrow_size|default": [ 16, 13 ],
+    "$trade_right_arrow_texture|default": "textures/ui/arrow_dark_right_stretch",
+    "variables": [
+      {
+        "requires": "($pocket_screen and not $trade_center_unchanged)",
+		"$trade_center_offset": [ 6, 0 ],
+		"$trade_right_arrow_size": [ 24, 19 ],
+        "$trade_right_arrow_texture": "textures/ui/arrow_dark_right"
+      }
+    ]
+  },
+  "cross_out_image": {
+	"size": "$trade_cross_out_size",
+	"offset": "$trade_center_offset",
+	"$trade_center_offset|default": [ 0, 0 ],
+	"$trade_cross_out_size|default": [ 15, 15 ],
+    "variables": [
+      {
+        "requires": "($pocket_screen and not $trade_center_unchanged)",
+		"$trade_center_offset": [ 10, 0 ],
+		"$trade_cross_out_size": [ 22, 22 ]
+      }
+    ]
+  },
+  "lock_image": {
+	"size": "$trade_lock_size",
+	"offset": "$trade_center_offset",
+	"$trade_center_offset|default": [ 0, 0 ],
+	"$trade_lock_size|default": [ 8, 8 ],
+    "variables": [
+      {
+        "requires": "($pocket_screen and not $trade_center_unchanged)",
+		"$trade_center_offset": [ 6, 0 ],
+		"$trade_lock_size": [ 16, 16 ]
+      }
+    ]
+  },
+  "hover_button": {
+    "modifications": [
+      {
+        "array_name": "bindings",
+        "operation": "remove",
+        "where": {
+          "binding_name": "(not #using_touch)"
+        }
+      },
+      {
+        "array_name": "bindings",
+        "operation": "remove",
+        "where": {
+          "binding_name_override": "#visible"
+        }
+      }
+    ]
+  },
+  "item_slots_stack_panel/pointing_right_arrow_holder/arrow_right_image": {
+    "$trade_center_unchanged": true
+  },
+  "trade_toggle": {
+    "$button_content": ""
+  },
+  "trade_highlight@trade2.trade_toggle": {
+    "layer": 11,
+    "$template_toggle": "trade2.toggle_content"
+  },
+  "trade_toggle_holder": {
+    "size": [ "100%", "50%c - 1px" ],
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {
+            "trade_highlight@trade2.trade_highlight": {
+              "anchor_from": "top_middle",
+              "anchor_to": "top_middle"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
